@@ -1,0 +1,62 @@
+/* 主题 / 高级UI - 毛玻璃、深色高级感 */
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 32px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* 烧杯玻璃质感增强 */
+.reaction-vessel {
+    background: radial-gradient(ellipse at 50% 30%, rgba(215, 240, 255, 0.3), rgba(150, 200, 230, 0.2));
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.reaction-vessel::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 30%;
+    height: 30px;
+    background: radial-gradient(ellipse, rgba(255,255,245,0.4), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* 等待区文字发光 */
+.waiting-icon {
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 状态卡片 */
+.status {
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+    border-left: 4px solid #4facfe;
+}
+.status.ok {
+    border-left-color: #2a9d6e;
+}
+.status.warn {
+    border-left-color: #f4a261;
+}
+
+/* 拖拽高亮 */
+.reaction-vessel.drag-over {
+    box-shadow: 0 0 30px #00f2fe;
+    transform: scale(1.02);
+    transition: 0.1s;
+}
